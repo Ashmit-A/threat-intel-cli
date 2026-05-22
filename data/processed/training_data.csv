@@ -1,0 +1,29 @@
+input_file,text,num_cves,num_malware,num_ips,num_domains,severity
+input1.txt,threat actors used emotet malware exploiting cve-2023-23397 to establish persistence using powershell scripts.,1,1,0,0,Critical
+input10.txt,security analysts identified ransomware encryption behavior across several endpoints in the network.,0,1,0,0,Low
+input11.txt,threat actors exploited cve-2022-30190 and deployed trickbot for credential theft.,1,1,0,0,Critical
+input12.txt,an unauthorized script attempted to connect to suspicious-host.io from ip 8.8.8.8.,0,0,1,1,Low
+input13.txt,the malware attempted lateral movement using smb shares and persistence via scheduled tasks.,0,0,0,0,Low
+input14.txt,wannacry ransomware activity was detected after exploitation of cve-2017-0144.,1,2,0,0,Critical
+input15.txt,a malicious domain bad-actor.net was associated with phishing emails targeting employees.,0,0,0,1,Low
+input16.txt,threat intelligence feeds reported emotet infrastructure communicating with ip 45.33.32.1.,0,1,1,0,Medium
+input17.txt,the attacker exploited cve-2021-44228 to execute remote code on vulnerable servers.,1,0,0,0,Low
+input18.txt,ransomware operators deployed payloads after compromising administrator credentials.,0,1,0,0,Low
+input19.txt,network monitoring detected unusual dns requests to suspicious-update.com.,0,0,0,1,Low
+input2.txt,a ransomware campaign leveraged trickbot and credential dumping techniques to move laterally across the network.,0,2,0,0,Low
+input20.txt,credential dumping utilities were executed alongside trickbot malware activity.,0,1,0,0,Low
+input21.txt,a remote access trojan communicated with attacker-controlled.org using encrypted traffic.,0,1,0,1,Low
+input22.txt,cve-2023-3519 exploitation attempts were observed against internet-facing systems.,1,0,0,0,High
+input23.txt,security teams identified phishing emails but no malware execution occurred.,0,0,0,0,Low
+input24.txt,the infected endpoint contacted malicious-download.net from ip 203.0.113.25.,0,0,1,1,Low
+input25.txt,emotet and ransomware payloads were distributed after exploitation of cve-2023-23397 and communication with control-panel.com.,1,2,0,1,Critical
+input3.txt,the attacker contacted malicious-domain.com from ip 192.168.1.5 while deploying emotet using cve-2023-23397.,1,1,1,1,Critical
+input4.txt,a phishing campaign delivered wannacry malware through a malicious attachment exploiting cve-2021-34527.,1,1,0,0,Critical
+input5.txt,suspicious outbound traffic was detected from ip 10.0.0.45 communicating with update-server.net.,0,0,1,1,Low
+input6.txt,the soc observed powershell execution and persistence mechanisms associated with trickbot malware.,0,1,0,0,Low
+input7.txt,an attacker exploited cve-2020-1472 to gain administrative privileges within the domain controller.,1,0,0,0,Low
+input8.txt,multiple failed login attempts originated from ip 172.16.5.12 targeting the finance department systems.,0,0,1,0,Low
+input9.txt,emotet malware established communication with command-control.org after initial compromise.,0,1,0,1,Medium
+unknown1.txt,attackers exploited cve-2024-1111 and deployed ransomware across critical infrastructure servers.,1,1,0,0,Critical
+unknown2.txt,suspicious traffic was observed communicating with dark-update.net from ip 185.22.61.11.,0,0,1,1,Low
+unknown3.txt,employees received phishing emails but no malware execution was detected.,0,0,0,0,Medium

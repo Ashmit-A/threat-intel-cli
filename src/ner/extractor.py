@@ -14,7 +14,7 @@ MALWARE_KEYWORDS = [
 
 def extract_entities(text):
 
-    cve_pattern = r"CVE-\d{4}-\d+"
+    cve_pattern = r"cve-\d{4}-\d+"
     ip_pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
     # domain_pattern = r"\b[a-zA-Z0-9.-]+\.(com|net|org|io)\b"
     domain_pattern = r"\b(?:[a-zA-Z0-9-]+\.)+(?:com|net|org|io)\b"
