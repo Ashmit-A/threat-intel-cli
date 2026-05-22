@@ -1,0 +1,45 @@
+[
+    {
+        "input_file": "input1.txt",
+        "entities": {
+            "cves": [
+                "CVE-2023-23397"
+            ],
+            "malware": [
+                "emotet"
+            ],
+            "ips": [
+                "192.168.1.5"
+            ],
+            "domains": [
+                "malicious-domain.com"
+            ]
+        },
+        "features": {
+            "num_cves": 1,
+            "num_malware": 1,
+            "num_ips": 1,
+            "num_domains": 1
+        },
+        "severity": "Critical"
+    },
+    {
+        "input_file": "input2.txt",
+        "entities": {
+            "cves": [],
+            "malware": [
+                "trickbot",
+                "ransomware"
+            ],
+            "ips": [],
+            "domains": []
+        },
+        "features": {
+            "num_cves": 0,
+            "num_malware": 2,
+            "num_ips": 0,
+            "num_domains": 0
+        },
+        "severity": "Medium"
+    }
+]
