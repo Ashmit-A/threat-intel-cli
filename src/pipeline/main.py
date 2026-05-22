@@ -2,8 +2,9 @@ import json
 from pathlib import Path
 import pandas as pd
 
+from src.classifier.policy import decide_action
 from src.ner.extractor import extract_entities
-from src.classifier.baseline import classify_threat
+# from src.classifier.baseline import classify_threat
 from src.classifier.features import build_features
 from src.classifier.model import ThreatClassifier
 from src.utils.logger import logger
@@ -24,14 +25,18 @@ for file_path in samples_dir.glob("*.txt"):
         cleaned_text = clean_text(text)
         entities = extract_entities(cleaned_text)
         features = build_features(entities)
-        severity = classifier.predict(cleaned_text)
+        severity, confidence = classifier.predict(cleaned_text)
+
+        action = decide_action(severity, confidence)
 
         output = {
             "input_file": file_path.name,
             "text": cleaned_text,
             "entities": entities,
             "features": features,
-            "severity": severity
+            "severity": severity,
+            "confidence": confidence,
+            "action": action
         }
 
         all_outputs.append(output)
@@ -42,7 +47,7 @@ for file_path in samples_dir.glob("*.txt"):
 
         logger.error(f"Error processing {file_path.name}: {e}")
 
-print(json.dumps(all_outputs, indent=2))    
+# print(json.dumps(all_outputs, indent=2))    
 
 
 rows = []
@@ -55,7 +60,9 @@ for item in all_outputs:
         "num_malware": item["features"]["num_malware"],
         "num_ips": item["features"]["num_ips"],
         "num_domains": item["features"]["num_domains"],
-        "severity": item["severity"]
+        "confidence": item["confidence"],
+        "severity": item["severity"],
+        "action": item["action"],
     }
     rows.append(row)
 

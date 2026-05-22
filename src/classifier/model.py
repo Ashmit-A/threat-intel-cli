@@ -32,5 +32,6 @@ class ThreatClassifier:
 
         embedding = generate_embedding(text)
         X = np.array([embedding])
+        confidence = self.model.predict_proba(X).max()
 
-        return self.model.predict(X)[0]
+        return self.model.predict(X)[0] , float(confidence)

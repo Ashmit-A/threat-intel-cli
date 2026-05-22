@@ -1,0 +1,1 @@
+Employees received phishing emails but no malware execution was detected.

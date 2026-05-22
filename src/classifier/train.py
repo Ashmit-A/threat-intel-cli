@@ -5,6 +5,7 @@ import numpy as np
 from src.classifier.pipeline_features import build_embedding_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
+from src.eval.metrics import evaluate_model
 
 
 df = pd.read_csv("data/processed/training_data.csv")
@@ -36,6 +37,8 @@ model.fit(X_train, y_train)
 predictions = model.predict(X_test)
 
 print(classification_report(y_test, predictions))
+
+evaluate_model(y_test, predictions)
 
 # Save model
 joblib.dump(model, "models/classifier.pkl")
