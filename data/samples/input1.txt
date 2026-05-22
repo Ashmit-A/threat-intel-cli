@@ -1,0 +1,2 @@
+The attacker contacted malicious-domain.com from IP 192.168.1.5
+while deploying Emotet using CVE-2023-23397.
