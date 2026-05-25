@@ -1,2 +1,0 @@
-A ransomware campaign leveraged TrickBot and credential dumping
-techniques to move laterally across the network.
