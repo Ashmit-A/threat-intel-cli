@@ -1,0 +1,1 @@
+Attackers exploited CVE-2024-1111 and deployed ransomware across critical infrastructure servers.
